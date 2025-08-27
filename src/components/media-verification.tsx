@@ -116,13 +116,13 @@ export function MediaVerification() {
   )
 
   return (
-    <div className="space-y-6">
+    <div className="gradient-mesh space-y-6">
       {/* Upload Section */}
       <Card>
         <CardHeader>
           <CardTitle className="text-xl font-semibold text-foreground">Upload Media for Verification</CardTitle>
           <p className="text-sm text-muted-foreground">
-            Upload videos, images, or audio files to detect deepfakes and manipulated content
+            Upload videos or images to detect deepfakes and manipulated content
           </p>
         </CardHeader>
         <CardContent>

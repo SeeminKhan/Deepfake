@@ -59,17 +59,6 @@ const extendedReports: ExtendedReport[] = [
   },
   {
     id: 3,
-    type: "Audio",
-    verdict: "Fake",
-    date: "2025-08-27",
-    filename: "voice_message.wav",
-    confidence: "94%",
-    processingTime: "1.5s",
-    fileSize: "5.7 MB",
-    source: "Stream",
-  },
-  {
-    id: 4,
     type: "Video",
     verdict: "Real",
     date: "2025-08-27",
@@ -80,7 +69,7 @@ const extendedReports: ExtendedReport[] = [
     source: "Upload",
   },
   {
-    id: 5,
+    id: 4,
     type: "Image",
     verdict: "Fake",
     date: "2025-08-27",
@@ -89,17 +78,6 @@ const extendedReports: ExtendedReport[] = [
     processingTime: "1.2s",
     fileSize: "4.3 MB",
     source: "Browser",
-  },
-  {
-    id: 6,
-    type: "Audio",
-    verdict: "Real",
-    date: "2025-08-26",
-    filename: "interview_audio.mp3",
-    confidence: "91%",
-    processingTime: "2.7s",
-    fileSize: "12.8 MB",
-    source: "Upload",
   },
 ]
 
@@ -174,7 +152,7 @@ export function Reports() {
     filteredReports.reduce((sum, r) => sum + Number.parseInt(r.confidence), 0) / filteredReports.length || 0
 
   return (
-    <div className="space-y-6">
+    <div className=" gradient-mesh space-y-6">
       {/* Summary Statistics */}
       <div className="grid gap-4 md:grid-cols-4">
         <Card>
@@ -278,7 +256,6 @@ export function Reports() {
                   <SelectItem value="all">All Types</SelectItem>
                   <SelectItem value="video">Video</SelectItem>
                   <SelectItem value="image">Image</SelectItem>
-                  <SelectItem value="audio">Audio</SelectItem>
                 </SelectContent>
               </Select>
             </div>

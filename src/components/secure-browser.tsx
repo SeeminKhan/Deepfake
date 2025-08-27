@@ -148,7 +148,7 @@ export function SecureBrowser() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="gradient-mesh space-y-6">
       {/* URL Input Section */}
       <Card>
         <CardHeader>
